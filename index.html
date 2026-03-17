@@ -8,6 +8,7 @@
 <meta name="author" content="Devaraj J"/>
 <meta property="og:title" content="Devaraj J — Frontend Developer"/>
 <meta property="og:description" content="CS Student & Frontend Developer building responsive, AI-powered web apps."/>
+<link rel="icon" type="image/png" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -51,7 +52,10 @@ body:has(a:hover) #cur-ring,body:has(button:hover) #cur-ring{width:60px;height:6
 /* ═══ NAV ═══ */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.1rem 3.5rem;display:flex;justify-content:space-between;align-items:center;transition:all .4s}
 nav.scrolled{background:rgba(4,6,15,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:0 4px 30px rgba(0,212,255,.05)}
-.nav-logo{font-family:var(--display);font-weight:900;font-size:.95rem;letter-spacing:.1em;text-decoration:none;background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--display);font-weight:900;font-size:.95rem;letter-spacing:.1em}
+.nav-logo-text{background:linear-gradient(90deg,var(--c1),var(--c2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-logo-img{height:32px;width:auto;border-radius:8px;box-shadow:0 0 15px rgba(0,212,255,0.3);transition:transform .3s ease}
+.nav-logo:hover .nav-logo-img{transform:scale(1.1) rotate(5deg)}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{font-family:var(--mono);font-size:.7rem;color:var(--muted);text-decoration:none;letter-spacing:.1em;transition:color .2s;position:relative}
 .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--c1);transition:width .3s}
@@ -317,7 +321,10 @@ footer{border-top:1px solid var(--border);padding:2rem 3.5rem;display:flex;justi
 
 <!-- NAV -->
 <nav id="nav">
-  <a href="#hero" class="nav-logo">DEVA<span style="color:var(--c2)">RAJ</span></a>
+  <a href="#hero" class="nav-logo">
+    <img src="logo.png" alt="DJ Logo" class="nav-logo-img">
+    <span class="nav-logo-text">DEVA<span style="color:var(--c2)">RAJ</span></span>
+  </a>
   <ul class="nav-links">
     <li><a href="#about">about</a></li>
     <li><a href="#experience">experience</a></li>
