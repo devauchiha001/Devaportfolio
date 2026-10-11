@@ -22,7 +22,15 @@
   };
 
   function matches(text, words) {
+    return words.some(function (word) {
+      var needle = word.toLowerCase().trim();
+      if (!needle) return false;
+      var escaped = needle.replace(/[.*+?^\${}()|[\]\\]/g, '\\  function matches(text, words) {
     return words.some(function (word) { return text.indexOf(word) !== -1; });
+  }');
+      var pattern = new RegExp('(^|[^a-z0-9])' + escaped + '([^a-z0-9]|$)');
+      return pattern.test(text);
+    });
   }
 
   function answerFor(question) {
@@ -42,7 +50,7 @@
       return {
         text: 'Hi! Welcome to Devaraj’s portfolio. I’m Deva AI. Ask me about CareerForge AI, Smart Study AI, his technical skills or experience—or use a link below to explore his work.',
         actions: [
-          { label: 'Explore projects', url: '#work' },
+          { label: 'Explore projects', url: 'index.html#work' },
           { label: 'CareerForge AI', url: links.careerforge },
           { label: 'Contact Devaraj', url: links.email }
         ]
