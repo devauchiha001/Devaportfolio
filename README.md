@@ -14,7 +14,8 @@ A responsive personal portfolio with a product-led homepage and a detailed Caree
 - `case-study.html` — CareerForge AI case study
 - `case-study.css` — case study layout and components
 - `sitemap.xml` / `robots.txt` — basic crawl guidance
-- `docs/PORTFOLIO_REDESIGN_BRIEF.md` — strategy, information architecture, style guide, wireframe, validation plan and handoff checklist
+- `docs/PORTFOLIO_REDESIGN_BRIEF.md` — strategy, information architecture, wireframe, validation plan and handoff checklist
+- `docs/DESIGN_SYSTEM.md` — visual tokens, typography, components, responsive rules, motion and accessibility standards
 - `devaraj-profile.png`, `logo.png` — existing visual assets
 
 ## Deploy
