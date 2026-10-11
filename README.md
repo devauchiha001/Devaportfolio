@@ -16,7 +16,8 @@ A responsive personal portfolio with a product-led homepage and a detailed Caree
 - `sitemap.xml` / `robots.txt` — basic crawl guidance
 - `docs/PORTFOLIO_REDESIGN_BRIEF.md` — strategy, information architecture, wireframe, validation plan and handoff checklist
 - `docs/DESIGN_SYSTEM.md` — visual tokens, typography, components, responsive rules, motion and accessibility standards
-- `devaraj-profile.png`, `logo.png` — existing visual assets
+- `devaraj-profile.png` — existing profile image
+- `logo.svg` — new vector DJ portfolio monogram used as the site logo and favicon
 
 ## Deploy
 For a standard GitHub Pages project site, publish the repository root and confirm the site URL in repository settings. If the site is served on a custom domain or a different base path, update the canonical URLs in `index.html` and `case-study.html`, and the locations in `sitemap.xml` and `robots.txt` before publishing.
