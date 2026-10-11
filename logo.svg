@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Devaraj J portfolio monogram</title>
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#53c8ff"/>
+      <stop offset="0.52" stop-color="#4d55e8"/>
+      <stop offset="1" stop-color="#a06bff"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="29" fill="#171920"/>
+  <path d="M24 29h25c24 0 39 14 39 35S73 99 49 99H24V29Zm17 14v42h8c14 0 22-7 22-21s-8-21-22-21h-8Z" fill="#f7f7f2"/>
+  <path d="M79 29h17v47c0 16-9 25-25 25-7 0-13-2-18-6l9-13c3 2 6 4 9 4 6 0 8-3 8-10V29Z" fill="url(#brand)"/>
+  <path d="M26 108h76" stroke="url(#brand)" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+</svg>
