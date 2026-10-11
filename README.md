@@ -30,3 +30,11 @@ The CSS and JavaScript files in the root are linked by the current HTML pages. T
 - Confirm contact information and project descriptions are current.
 - Run keyboard/mobile checks and Lighthouse on the actual deployed URL.
 - Do not publish user data or unverified product outcome metrics.
+
+
+## Deva AI portfolio assistant
+
+- `ai-assistant.css` and `ai-assistant.js` provide the accessible floating assistant widget included on the home and CareerForge case-study pages.
+- The first iteration uses curated, deterministic answers from verified portfolio information; it does not send visitor messages to an AI provider yet.
+- Next step for true model-generated replies: deploy a server-side endpoint with a private model credential, add rate limits and monitoring, and keep the endpoint URL/configuration separate from any secret.
+- The assistant links users to the actual project, case study, GitHub, LinkedIn and email routes. Test mobile layout, keyboard access and each action before launch.
