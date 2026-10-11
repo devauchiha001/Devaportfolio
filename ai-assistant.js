@@ -53,13 +53,13 @@
     if (matches(q, ['experience', 'work history', 'domino', 'dream code', 'internship', 'support staff'])) {
       return {
         text: 'Devaraj’s listed experience includes Technical Support Staff at Domino’s Pizza (June 2025–August 2026), focused on operational support and troubleshooting, and a Frontend Web Developer internship at Dream Code (May–July 2025), involving responsive interfaces and UI debugging.',
-        actions: [{ label: 'See experience', url: '#experience' }, { label: 'LinkedIn profile', url: links.linkedin }]
+        actions: [{ label: 'See experience', url: 'index.html#experience' }, { label: 'LinkedIn profile', url: links.linkedin }]
       };
     }
     if (matches(q, ['education', 'degree', 'college', 'b.sc', 'bsc', 'graduate'])) {
       return {
         text: 'Devaraj completed a B.Sc. in Computer Science at Nazareth College of Arts & Science, from 2023 to 2026.',
-        actions: [{ label: 'About Devaraj', url: '#about' }, { label: 'LinkedIn profile', url: links.linkedin }]
+        actions: [{ label: 'About Devaraj', url: 'index.html#about' }, { label: 'LinkedIn profile', url: links.linkedin }]
       };
     }
     if (matches(q, ['contact', 'email', 'hire', 'connect', 'linkedin', 'github profile', 'resume', 'recruiter', 'recruitment', 'why hire', 'role fit', 'candidate'])) {
