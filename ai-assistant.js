@@ -28,6 +28,37 @@
   function answerFor(question) {
     var q = question.toLowerCase().replace(/\s+/g, ' ').trim();
 
+    if (matches(q, ["what's your name", "what is your name", "who are you", "your name", "who made you", "who created you", "are you ai"])) {
+      return {
+        text: 'I’m Deva AI, Devaraj’s portfolio assistant. I can help you explore his projects, technical skills, experience and contact links. This version uses curated portfolio information; a live AI model is not connected yet.',
+        actions: [
+          { label: 'CareerForge AI', url: links.careerforge },
+          { label: 'GitHub profile', url: links.github },
+          { label: 'Email Devaraj', url: links.email }
+        ]
+      };
+    }
+    if (matches(q, ['hello', 'hi', 'hey', 'good morning', 'good afternoon', 'good evening'])) {
+      return {
+        text: 'Hi! Welcome to Devaraj’s portfolio. I’m Deva AI. Ask me about CareerForge AI, Smart Study AI, his technical skills or experience—or use a link below to explore his work.',
+        actions: [
+          { label: 'Explore projects', url: '#work' },
+          { label: 'CareerForge AI', url: links.careerforge },
+          { label: 'Contact Devaraj', url: links.email }
+        ]
+      };
+    }
+    if (matches(q, ['what can you do', 'how can you help', 'help me', 'what do you do'])) {
+      return {
+        text: 'I can point you to Devaraj’s projects, summarize documented skills and experience, explain the CareerForge AI stack, and share contact or repository links. I use verified portfolio facts in this preview version and won’t invent experience or project metrics.',
+        actions: [
+          { label: 'CareerForge AI', url: links.careerforge },
+          { label: 'Smart Study AI', url: links.smartStudy },
+          { label: 'LinkedIn', url: links.linkedin }
+        ]
+      };
+    }
+
     if (matches(q, ['careerforge', 'career forge', 'job application project', 'resume analyzer', 'resume analysis'])) {
       return {
         text: 'CareerForge AI is Devaraj’s flagship project: a workspace for resume analysis, job-description matching, AI-assisted application drafts, remote-job discovery, saved jobs and application tracking. Its stack includes React, TypeScript, Vite, Firebase Authentication and Realtime Database, pdf.js, and Gemini through Firebase AI Logic when configured. The match score is a transparent heuristic, not an employer ATS score.',
@@ -149,6 +180,7 @@
 
   function openPanel() {
     panel.hidden = false;
+    widget.classList.add('is-open');
     launcher.setAttribute('aria-expanded', 'true');
     launcher.setAttribute('aria-label', 'Close Deva AI portfolio assistant');
     input.focus();
@@ -156,6 +188,7 @@
 
   function closePanel() {
     panel.hidden = true;
+    widget.classList.remove('is-open');
     launcher.setAttribute('aria-expanded', 'false');
     launcher.setAttribute('aria-label', 'Open Deva AI portfolio assistant');
     launcher.focus();
