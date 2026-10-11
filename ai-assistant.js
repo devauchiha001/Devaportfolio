@@ -22,14 +22,10 @@
   };
 
   function matches(text, words) {
+    var normalizedText = ' ' + text.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim() + ' ';
     return words.some(function (word) {
-      var needle = word.toLowerCase().trim();
-      if (!needle) return false;
-      var escaped = needle.replace(/[.*+?^\${}()|[\]\\]/g, '\\  function matches(text, words) {
-    return words.some(function (word) { return text.indexOf(word) !== -1; });
-  }');
-      var pattern = new RegExp('(^|[^a-z0-9])' + escaped + '([^a-z0-9]|$)');
-      return pattern.test(text);
+      var needle = word.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+      return needle.length > 0 && normalizedText.indexOf(' ' + needle + ' ') !== -1;
     });
   }
 
