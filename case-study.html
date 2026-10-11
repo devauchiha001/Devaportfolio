@@ -14,6 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css?v=20261011-2"><link rel="stylesheet" href="case-study.css?v=20261011-2">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"CareerForge AI","applicationCategory":"BusinessApplication","operatingSystem":"Web","url":"https://careerforge-ai.de5.net/","author":{"@type":"Person","name":"Devaraj J"}}</script>
+  <link rel="stylesheet" href="ai-assistant.css?v=20261011-1">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a><div class="site-shell">
@@ -89,4 +90,48 @@
 </main>
 <footer class="site-footer"><a class="wordmark" href="index.html"><span class="wordmark-mark"><img class="wordmark-image" src="logo.svg" alt=""></span><span class="wordmark-name">DEVARAJ J<span class="wordmark-dot">.</span></span></a><span>Built with intent · © <span id="year"></span></span><a href="#top" class="back-top">Back to top ↑</a></footer>
 </div><script src="script.js"></script>
+
+  <div class="deva-ai-widget" id="deva-ai-widget">
+    <aside class="deva-ai-panel" id="deva-ai-panel" role="dialog" aria-modal="false" aria-labelledby="deva-ai-title" aria-describedby="deva-ai-status" hidden>
+      <div class="deva-ai-panel-head">
+        <div class="deva-ai-avatar" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2.7 13.9 8l5.4 1.9-5.4 1.9-1.9 5.4-1.9-5.4-5.4-1.9L10.1 8 12 2.7Z" fill="currentColor"/><path d="m19.2 15.8.9 2.5 2.5.9-2.5.9-.9 2.5-.9-2.5-2.5-.9 2.5-.9.9-2.5Z" fill="currentColor"/></svg>
+        </div>
+        <div class="deva-ai-heading">
+          <strong id="deva-ai-title">Deva AI</strong>
+          <span>Portfolio assistant</span>
+        </div>
+        <span class="deva-ai-online"><i></i> Online</span>
+        <button class="deva-ai-close" id="deva-ai-close" type="button" aria-label="Close Deva AI">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <p class="deva-ai-status" id="deva-ai-status">Preview mode · replies use curated portfolio information; messages are not sent to an AI service yet.</p>
+      <div class="deva-ai-messages" id="deva-ai-messages" role="log" aria-live="polite" aria-relevant="additions text">
+        <div class="deva-ai-message deva-ai-message-assistant">
+          <div class="deva-ai-message-label">DEVA AI</div>
+          <div class="deva-ai-bubble">Hi! I can help you explore Devaraj’s projects, skills, experience, and contact links. What would you like to know?</div>
+        </div>
+      </div>
+      <div class="deva-ai-suggestions" id="deva-ai-suggestions" aria-label="Suggested questions">
+        <button type="button" data-question="Tell me about CareerForge AI">CareerForge AI</button>
+        <button type="button" data-question="Summarize Devaraj's skills">Technical skills</button>
+        <button type="button" data-question="Give me a recruiter summary">Recruiter summary</button>
+      </div>
+      <form class="deva-ai-form" id="deva-ai-form">
+        <label class="deva-ai-sr-only" for="deva-ai-input">Ask Deva AI a question</label>
+        <input id="deva-ai-input" name="question" type="text" maxlength="500" placeholder="Ask about a project or skill…" autocomplete="off" required>
+        <button type="submit" aria-label="Send question">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 3 10.8 13.2M21 3l-6.5 18-3.7-7.8L3 9.5 21 3Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </form>
+      <p class="deva-ai-footnote">Answers are based on published portfolio content. Verify technical details in the linked repositories.</p>
+    </aside>
+    <button class="deva-ai-launcher" id="deva-ai-launcher" type="button" aria-expanded="false" aria-controls="deva-ai-panel" aria-label="Open Deva AI portfolio assistant">
+      <span class="deva-ai-launcher-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.7 13.9 8l5.4 1.9-5.4 1.9-1.9 5.4-1.9-5.4-5.4-1.9L10.1 8 12 2.7Z" fill="currentColor"/><path d="M19.2 15.8l.9 2.5 2.5.9-2.5.9-.9 2.5-.9-2.5-2.5-.9 2.5-.9.9-2.5Z" fill="currentColor"/></svg></span>
+      <span>Ask Deva AI</span>
+      <span class="deva-ai-launcher-dot" aria-hidden="true"></span>
+    </button>
+  </div>
+<script src="ai-assistant.js?v=20261011-1"></script>
 </body></html>
