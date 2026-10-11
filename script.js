@@ -1,1 +1,46 @@
-const nav=document.querySelector('.nav'),menu=document.querySelector('.menu');window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20));menu?.addEventListener('click',()=>{const o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(o))});document.querySelectorAll('.nav nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>ob.observe(e));const roles=['Software Developer','Full-Stack Developer','Technical Support Specialist','Frontend Developer','AI Integration Developer'];let r=0,c=0,d=false,t=document.getElementById('typed');function type(){let s=roles[r];t.textContent=s.slice(0,c);if(!d&&c<s.length)c++;else if(!d){d=true;return setTimeout(type,1200)}else if(c>0)c--;else{d=false;r=(r+1)%roles.length}setTimeout(type,d?35:60)}type();document.getElementById('year').textContent=new Date().getFullYear();
+(function () {
+  var nav = document.getElementById('primary-nav');
+  var toggle = document.querySelector('.menu-toggle');
+  var year = document.getElementById('year');
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (year) year.textContent = String(new Date().getFullYear());
+
+  if (nav && toggle) {
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    });
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation');
+      });
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open navigation');
+        toggle.focus();
+      }
+    });
+  }
+
+  var revealItems = document.querySelectorAll('.reveal');
+  if (reduceMotion || !('IntersectionObserver' in window)) {
+    revealItems.forEach(function (item) { item.classList.add('is-visible'); });
+  } else {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -24px 0px' });
+    revealItems.forEach(function (item) { observer.observe(item); });
+  }
+})();
