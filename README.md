@@ -19,6 +19,22 @@ A responsive personal portfolio with a product-led homepage and a detailed Caree
 - `devaraj-profile.png` — existing profile image
 - `logo.svg` — new vector DJ portfolio monogram used as the site logo and favicon
 
+## Cinematic 3D redesign
+
+The `redesign/cinematic-3d-portfolio` branch introduces a dark navy / electric-blue visual system, a CSS-built 3D orb scene, floating interface panels, pointer parallax, and a density-limited canvas particle field. The hero is built without a heavy 3D runtime dependency, so the core experience remains lightweight and readable.
+
+- `index.html` — updated hero scene; original portfolio copy, contact details, project links and structured data retained.
+- `style.css` — cinematic design tokens, 3D scene styling, project surfaces, responsive refinements and reduced-motion fallbacks.
+- `script.js` — optional pointer parallax and canvas particles; scene decoration is disabled for reduced-motion and coarse-pointer devices.
+- `case-study.html` — dark theme color and updated stylesheet cache key.
+
+### Validation before merge
+
+- Confirm the live and source links for CareerForge AI and Smart Study AI.
+- Test the homepage and case study at 320px, 360px, 390px, 768px, 1024px and desktop widths.
+- Test keyboard-only navigation, the skip link, menu Escape behavior, and OS reduced-motion preference.
+- Run Lighthouse and check GitHub Pages deployment after merging; deployment status is not asserted by this source change.
+
 ## Deploy
 For a standard GitHub Pages project site, publish the repository root and confirm the site URL in repository settings. If the site is served on a custom domain or a different base path, update the canonical URLs in `index.html` and `case-study.html`, and the locations in `sitemap.xml` and `robots.txt` before publishing.
 
