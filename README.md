@@ -48,6 +48,22 @@ The CSS and JavaScript files in the root are linked by the current HTML pages. T
 - Do not publish user data or unverified product outcome metrics.
 
 
+## Motion polish review
+
+The `preview/motion-portfolio-polish` branch builds on the existing cinematic redesign without migrating the static HTML/CSS/JavaScript site to a framework.
+
+- Adds a compact motion-polish stylesheet and scroll-aware active-navigation script.
+- Keeps essential content visible by default; scroll reveals and hero staggering opt in only when the main script is available.
+- Removes the unused `motionPreference` local from `script.js`.
+- Refreshes the existing SVG site icon and its cache-busting references.
+- Preserves current project links, case-study content, contact actions, assistant widget, and metadata.
+
+### QA status
+
+Static checks performed during review: JavaScript parse checks for `script.js`, `motion-polish.js`, and `ai-assistant.js`; CSS brace-balance checks; duplicate HTML ID and in-page fragment-target checks; and local script/stylesheet reference checks.
+
+Not yet verified in a real browser: responsive rendering, menu and scroll interaction across viewport sizes, console/runtime behavior, keyboard-only interaction, and deployed-site performance. This repository is a static site and the root does not provide an npm production-build or automated test command. No deployment was performed. A resume download action was not added because no resume document is present in the repository.
+
 ## Deva AI portfolio assistant
 
 - `ai-assistant.css` and `ai-assistant.js` provide the accessible floating assistant widget included on the home and CareerForge case-study pages.

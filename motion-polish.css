@@ -43,6 +43,23 @@ html { scroll-padding-top: 100px; }
 .hero-copy > .hero-actions,
 .hero-copy > .hero-social-links,
 .hero-copy > .hero-footnote {
+  opacity: 1;
+  transform: none;
+}
+.js-motion-enabled .reveal:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(18px);
+}
+.js-motion-enabled .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.js-motion-enabled .hero-copy:not(.is-visible) > .eyebrow,
+.js-motion-enabled .hero-copy:not(.is-visible) > h1,
+.js-motion-enabled .hero-copy:not(.is-visible) > .hero-summary,
+.js-motion-enabled .hero-copy:not(.is-visible) > .hero-actions,
+.js-motion-enabled .hero-copy:not(.is-visible) > .hero-social-links,
+.js-motion-enabled .hero-copy:not(.is-visible) > .hero-footnote {
   opacity: 0;
   transform: translateY(15px);
 }
