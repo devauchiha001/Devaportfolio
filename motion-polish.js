@@ -64,7 +64,7 @@
           filterButton.setAttribute('aria-pressed', String(active));
         });
         skillTiles.forEach(function (tile) {
-          var groups = (tile.getAttribute('data-skill-groups') || '').split(/\\s+/);
+          var groups = (tile.getAttribute('data-skill-groups') || '').split(' ');
           var visible = selected === 'all' || groups.indexOf(selected) !== -1;
           tile.hidden = !visible;
           if (visible) visibleCount += 1;
