@@ -50,12 +50,13 @@ The CSS and JavaScript files in the root are linked by the current HTML pages. T
 
 ## Motion polish review
 
-The `preview/motion-portfolio-polish` branch builds on the existing cinematic redesign without migrating the static HTML/CSS/JavaScript site to a framework.
+The `preview/motion-portfolio-polish` branch builds on the existing cinematic redesign without migrating the static HTML/CSS/JavaScript site to a framework. The homepage now follows the supplied preview's near-black, violet/blue/cyan palette, asymmetric hero/about/skills composition, project showcase panels, and compact contact/brand cards.
 
 - Adds a compact motion-polish stylesheet and scroll-aware active-navigation script.
 - Keeps essential content visible by default; scroll reveals and hero staggering opt in only when the main script is available.
 - Removes the unused `motionPreference` local from `script.js`.
 - Refreshes the existing SVG site icon and its cache-busting references.
+- Adds `portfolio-design.css` for the responsive preview-inspired layout and design tokens; adds an evidence-based skills grid and a real portfolio source-code card.
 - Preserves current project links, case-study content, contact actions, assistant widget, and metadata.
 
 ### QA status
