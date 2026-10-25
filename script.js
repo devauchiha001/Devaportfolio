@@ -3,7 +3,6 @@
 
   // Opt into motion-enhanced states only when this script is available.
   // Base CSS remains readable if JavaScript is disabled or fails to load.
-  document.documentElement.classList.add('js-motion-enabled');
 
   var nav = document.getElementById('primary-nav');
   var toggle = document.querySelector('.menu-toggle');
@@ -122,5 +121,9 @@
       });
     }
   }
+
+
+  // Enable motion only after all enhancement setup has completed.
+  document.documentElement.classList.add('js-motion-enabled');
 
 })();

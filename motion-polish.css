@@ -46,6 +46,9 @@ html { scroll-padding-top: 100px; }
   opacity: 1;
   transform: none;
 }
+/* Progressive enhancement: the static page is visible without JavaScript. */
+.reveal { opacity: 1; transform: none; }
+
 .js-motion-enabled .reveal:not(.is-visible) {
   opacity: 0;
   transform: translateY(18px);
