@@ -1,0 +1,144 @@
+/* Focused motion and interaction polish for the existing portfolio.
+   Uses the existing visual system and honors reduced-motion preferences. */
+html { scroll-padding-top: 100px; }
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(7, 11, 24, .78);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  transition: background-color 260ms ease, border-color 260ms ease, box-shadow 260ms ease;
+}
+.site-header.is-scrolled {
+  background: rgba(7, 11, 24, .95);
+  border-bottom-color: #2a3b5c;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, .22);
+}
+.primary-nav a {
+  position: relative;
+  padding-block: 8px;
+  transition: color 220ms ease;
+}
+.primary-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #8a6bff, #63d7ff);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 240ms cubic-bezier(.2,.75,.25,1);
+}
+.primary-nav a:hover::after,
+.primary-nav a[aria-current="location"]::after,
+.primary-nav a:focus-visible::after { transform: scaleX(1); }
+.primary-nav a[aria-current="location"] { color: #f5f7ff; }
+.hero-copy > .eyebrow,
+.hero-copy > h1,
+.hero-copy > .hero-summary,
+.hero-copy > .hero-actions,
+.hero-copy > .hero-social-links,
+.hero-copy > .hero-footnote {
+  opacity: 1;
+  transform: none;
+}
+/* Progressive enhancement: the static page is visible without JavaScript. */
+.reveal { opacity: 1; transform: none; }
+
+.js-motion-enabled .reveal:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(18px);
+}
+.js-motion-enabled .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.js-motion-enabled .hero-copy:not(.is-visible) > .eyebrow,
+.js-motion-enabled .hero-copy:not(.is-visible) > h1,
+.js-motion-enabled .hero-copy:not(.is-visible) > .hero-summary,
+.js-motion-enabled .hero-copy:not(.is-visible) > .hero-actions,
+.js-motion-enabled .hero-copy:not(.is-visible) > .hero-social-links,
+.js-motion-enabled .hero-copy:not(.is-visible) > .hero-footnote {
+  opacity: 0;
+  transform: translateY(15px);
+}
+.hero-copy.is-visible > .eyebrow { animation: hero-rise 650ms cubic-bezier(.2,.75,.25,1) 20ms both; }
+.hero-copy.is-visible > h1 { animation: hero-rise 760ms cubic-bezier(.2,.75,.25,1) 90ms both; }
+.hero-copy.is-visible > .hero-summary { animation: hero-rise 680ms cubic-bezier(.2,.75,.25,1) 170ms both; }
+.hero-copy.is-visible > .hero-actions { animation: hero-rise 650ms cubic-bezier(.2,.75,.25,1) 240ms both; }
+.hero-copy.is-visible > .hero-social-links { animation: hero-rise 650ms cubic-bezier(.2,.75,.25,1) 300ms both; }
+.hero-copy.is-visible > .hero-footnote { animation: hero-rise 650ms cubic-bezier(.2,.75,.25,1) 360ms both; }
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.button,
+.text-link,
+.project-card,
+.featured-project,
+.about-links a,
+.header-contact,
+.back-top {
+  transition-timing-function: cubic-bezier(.2,.75,.25,1);
+}
+.project-card,
+.featured-project {
+  transition: transform 340ms cubic-bezier(.2,.75,.25,1), border-color 260ms ease, box-shadow 340ms ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #4568a2;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, .27), 0 0 32px rgba(67, 125, 255, .08);
+}
+.featured-project:hover {
+  border-color: #3e5f91;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, .22);
+}
+.project-card-art .art-corner-arrow {
+  transition: transform 260ms cubic-bezier(.2,.75,.25,1), background-color 260ms ease;
+}
+.project-card:hover .art-corner-arrow { transform: translate(2px, -2px); }
+.project-card .study-art-card {
+  transition: transform 320ms cubic-bezier(.2,.75,.25,1), border-color 260ms ease;
+}
+.project-card:hover .study-art-card { transform: rotate(-1deg) translateY(-4px); border-color: #5a7db6; }
+.button:active { transform: translateY(0) scale(.985); }
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #78dcff;
+  outline-offset: 4px;
+}
+@media (max-width: 700px) {
+  html { scroll-padding-top: 82px; }
+  .site-header { background: rgba(7, 11, 24, .92); }
+  .primary-nav a::after { bottom: 3px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  .hero-copy > .eyebrow,
+  .hero-copy > h1,
+  .hero-copy > .hero-summary,
+  .hero-copy > .hero-actions,
+  .hero-copy > .hero-social-links,
+  .hero-copy > .hero-footnote {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+  .site-header,
+  .primary-nav a,
+  .primary-nav a::after,
+  .project-card,
+  .featured-project,
+  .button,
+  .text-link,
+  .project-card-art .art-corner-arrow,
+  .project-card .study-art-card {
+    transition: none !important;
+  }
+}

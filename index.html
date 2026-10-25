@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#070b18">
+  <meta name="theme-color" content="#080713">
   <title>Devaraj J — Software Developer & AI Product Builder</title>
   <meta name="description" content="Devaraj J is a software developer building useful web applications, AI-powered workflows and thoughtful digital experiences. Explore CareerForge AI and Smart Study AI.">
   <meta name="robots" content="index,follow">
@@ -13,7 +13,7 @@
   <meta property="og:description" content="Selected work in web development, AI integration and practical product engineering.">
   <meta property="og:image" content="https://raw.githubusercontent.com/devauchiha001/Devaportfolio/main/logo.svg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="logo.svg">
+  <link rel="icon" href="logo.svg?v=20261025-3">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -33,21 +33,25 @@
   }
   </script>
   <link rel="stylesheet" href="ai-assistant.css?v=20261011-4">
+  <link rel="stylesheet" href="motion-polish.css?v=20261025-3">
+  <link rel="stylesheet" href="portfolio-design.css?v=20261025-2">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="site-shell">
     <header class="site-header" id="top">
-      <a class="wordmark" href="index.html" aria-label="Devaraj J home"><span class="wordmark-mark"><img class="wordmark-image" src="logo.svg" alt=""></span><span class="wordmark-name">DEVARAJ J<span class="wordmark-dot">.</span></span></a>
+      <a class="wordmark" href="index.html" aria-label="Devaraj J home"><span class="wordmark-mark"><img class="wordmark-image" src="logo.svg?v=20261025-3" alt=""></span><span class="wordmark-name">DEVARAJ J<span class="wordmark-dot">.</span></span></a>
       <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
       <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-        <a href="#work">Work</a><a href="#approach">Approach</a><a href="#experience">Experience</a><a href="#about">About</a>
+        <a href="#work">Work</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#about">About</a><a href="#approach">Approach</a>
       </nav>
       <a class="header-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
     </header>
 
-    <main id="main">
-      <section class="hero section-wrap cinematic-hero" aria-labelledby="hero-title">
+    <main id="main" class="portfolio-main">
+    <div class="portfolio-layout">
+      
+      <section class="hero section-wrap cinematic-hero portfolio-hero" aria-labelledby="hero-title">
         <div class="hero-copy reveal">
           <p class="eyebrow"><span class="eyebrow-dot"></span> SOFTWARE DEVELOPMENT · AI · PRODUCT THINKING</p>
           <h1 id="hero-title">I build software that makes <span class="text-highlight">complex work feel simpler.</span></h1>
@@ -86,12 +90,34 @@
         </div>
       </section>
 
-      <div class="tech-ribbon" aria-label="Technologies used">
-        <div class="ribbon-label">TOOLS I BUILD WITH</div>
-        <div class="ribbon-items"><span>React</span><i>✳</i><span>TypeScript</span><i>✳</i><span>Vite</span><i>✳</i><span>Firebase</span><i>✳</i><span>Gemini API</span><i>✳</i><span>JavaScript</span><i>✳</i><span>Python</span></div>
-      </div>
+      <section class="section-wrap about-section portfolio-about" id="about" aria-labelledby="about-title">
+        <div class="about-card reveal"><div class="about-mark">DJ<span>.</span></div><div><p class="eyebrow">04 / A LITTLE ABOUT ME</p><h2 id="about-title">Curious by nature.<br>Practical by default.</h2><p>I'm interested in web development, AI-powered tools, UI/UX and the small technical details that make products easier to trust and use. I bring a support mindset to development: understand the issue, find the cause, communicate clearly, and keep improving.</p><div class="about-links"><a href="https://github.com/devauchiha001" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/devaraj-j-5021363a8" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div></div></div>
+      </section>
 
-      <section class="section-wrap work-section" id="work" aria-labelledby="work-title">
+      <section class="skills-section portfolio-skills" id="skills" aria-labelledby="skills-title">
+  <div class="skills-panel">
+    <div class="skills-heading"><p class="eyebrow">02 / SKILLS</p><h2 id="skills-title">Tools &amp; technologies<span class="heading-period">.</span></h2><p>Technologies used across my web, AI-assisted, and product-building projects.</p></div>
+    <div class="skills-category-row" role="group" aria-label="Filter skills">
+      <button class="skill-category is-current" type="button" data-skill-filter="all" aria-pressed="true">All</button>
+      <button class="skill-category" type="button" data-skill-filter="development" aria-pressed="false">Development</button>
+      <button class="skill-category" type="button" data-skill-filter="ai" aria-pressed="false">AI &amp; APIs</button>
+      <button class="skill-category" type="button" data-skill-filter="product" aria-pressed="false">Product craft</button>
+    </div>
+    <p class="skill-filter-status" role="status" aria-live="polite">Showing all 8 skills.</p>
+    <div class="skills-grid">
+      <div class="skill-tile" data-skill-groups="development"><span class="skill-glyph glyph-js" aria-hidden="true">JS</span><strong>JavaScript</strong><small>Language</small></div>
+      <div class="skill-tile" data-skill-groups="development product"><span class="skill-glyph glyph-react" aria-hidden="true">✳</span><strong>React</strong><small>UI library</small></div>
+      <div class="skill-tile" data-skill-groups="development"><span class="skill-glyph glyph-ts" aria-hidden="true">TS</span><strong>TypeScript</strong><small>Language</small></div>
+      <div class="skill-tile" data-skill-groups="development"><span class="skill-glyph glyph-python" aria-hidden="true">Py</span><strong>Python</strong><small>Programming</small></div>
+      <div class="skill-tile" data-skill-groups="development ai"><span class="skill-glyph glyph-firebase" aria-hidden="true">F</span><strong>Firebase</strong><small>App services</small></div>
+      <div class="skill-tile" data-skill-groups="ai"><span class="skill-glyph glyph-gemini" aria-hidden="true">✧</span><strong>Gemini API</strong><small>AI integration</small></div>
+      <div class="skill-tile" data-skill-groups="development"><span class="skill-glyph glyph-vite" aria-hidden="true">V</span><strong>Vite</strong><small>Tooling</small></div>
+      <div class="skill-tile" data-skill-groups="product"><span class="skill-glyph glyph-ui" aria-hidden="true">UI</span><strong>UI / UX</strong><small>Design basics</small></div>
+    </div>
+  </div>
+</section>
+
+      <section class="section-wrap work-section portfolio-work" id="work" aria-labelledby="work-title">
         <div class="section-heading reveal"><div><p class="eyebrow">01 / SELECTED WORK</p><h2 id="work-title">Products with a purpose<span class="heading-period">.</span></h2></div><p class="section-intro">I learn by building. These projects show how I connect interface design, application logic and real-world workflows.</p></div>
 
         <article class="featured-project reveal">
@@ -118,13 +144,32 @@
             <div class="project-card-copy"><p class="eyebrow">AI-POWERED LEARNING</p><h3>Smart Study AI</h3><p>A learning workspace with note/PDF analysis, AI tutoring, spaced-repetition flashcards, voice tools, focus sessions and progress tracking.</p><div class="project-stack"><span>React</span><span>Vite</span><span>Firebase</span><span>Gemini API</span></div><a class="text-link" href="https://smartstudyapp-ca670.web.app/" target="_blank" rel="noopener noreferrer">Explore project <span aria-hidden="true">↗</span></a></div>
           </article>
           <article class="project-card project-note reveal">
-            <div class="note-art"><span class="note-stamp">BUILD LOG / 03</span><div class="note-symbol">{ }</div><div class="note-caption">SMALL ITERATIONS.<br>BETTER SYSTEMS.</div><div class="note-lines"><i></i><i></i><i></i><i></i></div></div>
-            <div class="project-card-copy"><p class="eyebrow">HOW I THINK</p><h3>Process over polish alone.</h3><p>I focus on the user flow, failure states, technical trade-offs and the details that help a product work beyond its happy path.</p><div class="project-stack"><span>Problem framing</span><span>Implementation</span><span>Iteration</span></div><a class="text-link" href="#approach">See my approach <span aria-hidden="true">↘</span></a></div>
+            <a class="project-card-art note-art" href="https://github.com/devauchiha001/Devaportfolio" target="_blank" rel="noopener noreferrer" aria-label="View the developer portfolio source code"><span class="note-stamp">WEB / INTERACTION</span><div class="note-symbol">{ }</div><div class="note-caption">DESIGN.<br>BUILD.<br>REFINE.</div><div class="note-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div><span class="art-corner-arrow" aria-hidden="true">↗</span></a>
+            <div class="project-card-copy"><p class="eyebrow">PERSONAL WEBSITE</p><h3>Developer Portfolio</h3><p>A responsive portfolio with a custom visual system, CSS-built orbital scene, accessible navigation, and a dedicated project case study.</p><div class="project-stack"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>SVG</span></div><a class="text-link" href="https://github.com/devauchiha001/Devaportfolio" target="_blank" rel="noopener noreferrer">View source code <span aria-hidden="true">↗</span></a></div>
           </article>
         </div>
       </section>
 
-      <section class="approach-section" id="approach" aria-labelledby="approach-title">
+      <section class="contact-section portfolio-contact" id="contact" aria-labelledby="contact-title">
+        <div class="section-wrap contact-inner reveal"><p class="eyebrow">05 / CONTACT</p><h2 id="contact-title">Have a useful problem<br>to solve<span class="heading-period">?</span></h2><p>I'm open to suitable software development, frontend, full-stack and technical support opportunities. Let's talk about the work.</p><div class="contact-actions"><a class="button button-primary" href="mailto:j.devarajtech@gmail.com">Email Devaraj <span aria-hidden="true">↗</span></a><a class="button button-light" href="https://www.linkedin.com/in/devaraj-j-5021363a8" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a><a class="button button-light" href="https://github.com/devauchiha001" target="_blank" rel="noopener noreferrer">View GitHub <span aria-hidden="true">↗</span></a></div><span class="contact-small">Email: j.devarajtech@gmail.com · Connect by email, GitHub, or LinkedIn.</span></div>
+      </section>
+
+      <aside class="portfolio-brand-card" aria-label="Devaraj J portfolio identity">
+  <div class="brand-orbit brand-orbit-one" aria-hidden="true"></div><div class="brand-orbit brand-orbit-two" aria-hidden="true"></div>
+  <img src="logo.svg?v=20261025-3" alt="" width="116" height="116" loading="lazy">
+  <h2>Devaraj J<span>.</span></h2><p>Developer Portfolio</p><span class="brand-tagline">THOUGHTFUL DIGITAL CRAFT</span>
+</aside>
+
+      <section class="section-wrap profile-section portfolio-experience" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading reveal"><div><p class="eyebrow">03 / EXPERIENCE</p><h2 id="experience-title">Where I've learned<span class="heading-period">.</span></h2></div><p class="section-intro">A mix of hands-on technical support, web development practice and a computer science foundation.</p></div>
+        <div class="experience-list">
+          <article class="experience-row reveal"><div class="experience-date">JUN 2025 — AUG 2026</div><div><h3>Technical Support Staff</h3><p class="experience-company">Domino's Pizza</p><p>Supported day-to-day technical operations, troubleshooting and service continuity in a fast-paced environment.</p></div><span class="experience-type">TECHNICAL SUPPORT</span></article>
+          <article class="experience-row reveal"><div class="experience-date">MAY 2025 — JUL 2025</div><div><h3>Frontend Web Developer Intern</h3><p class="experience-company">Dream Code</p><p>Worked on responsive web interfaces, interactive components, UI debugging and cross-device layout checks.</p></div><span class="experience-type">WEB DEVELOPMENT</span></article>
+          <article class="experience-row reveal"><div class="experience-date">2023 — 2026</div><div><h3>B.Sc. Computer Science</h3><p class="experience-company">Nazareth College of Arts & Science</p><p>Completed undergraduate study with a focus on computer science fundamentals and project-based learning.</p></div><span class="experience-type">EDUCATION</span></article>
+        </div>
+      </section>
+
+      <section class="approach-section portfolio-approach" id="approach" aria-labelledby="approach-title">
         <div class="section-wrap">
           <div class="section-heading reveal"><div><p class="eyebrow">02 / HOW I APPROACH WORK</p><h2 id="approach-title">Make it clear.<br><span>Make it useful.</span></h2></div><p class="section-intro">Good software is more than a working screen. It needs a clear purpose, understandable feedback and graceful handling when things go wrong.</p></div>
           <div class="approach-steps">
@@ -136,27 +181,12 @@
           <p class="approach-note">This is the process I aim to follow; specific research and testing claims are documented only when they have actually been completed.</p>
         </div>
       </section>
-
-      <section class="section-wrap profile-section" id="experience" aria-labelledby="experience-title">
-        <div class="section-heading reveal"><div><p class="eyebrow">03 / EXPERIENCE</p><h2 id="experience-title">Where I've learned<span class="heading-period">.</span></h2></div><p class="section-intro">A mix of hands-on technical support, web development practice and a computer science foundation.</p></div>
-        <div class="experience-list">
-          <article class="experience-row reveal"><div class="experience-date">JUN 2025 — AUG 2026</div><div><h3>Technical Support Staff</h3><p class="experience-company">Domino's Pizza</p><p>Supported day-to-day technical operations, troubleshooting and service continuity in a fast-paced environment.</p></div><span class="experience-type">TECHNICAL SUPPORT</span></article>
-          <article class="experience-row reveal"><div class="experience-date">MAY 2025 — JUL 2025</div><div><h3>Frontend Web Developer Intern</h3><p class="experience-company">Dream Code</p><p>Worked on responsive web interfaces, interactive components, UI debugging and cross-device layout checks.</p></div><span class="experience-type">WEB DEVELOPMENT</span></article>
-          <article class="experience-row reveal"><div class="experience-date">2023 — 2026</div><div><h3>B.Sc. Computer Science</h3><p class="experience-company">Nazareth College of Arts & Science</p><p>Completed undergraduate study with a focus on computer science fundamentals and project-based learning.</p></div><span class="experience-type">EDUCATION</span></article>
-        </div>
-      </section>
-
-      <section class="section-wrap about-section" id="about" aria-labelledby="about-title">
-        <div class="about-card reveal"><div class="about-mark">DJ<span>.</span></div><div><p class="eyebrow">04 / A LITTLE ABOUT ME</p><h2 id="about-title">Curious by nature.<br>Practical by default.</h2><p>I'm interested in web development, AI-powered tools, UI/UX and the small technical details that make products easier to trust and use. I bring a support mindset to development: understand the issue, find the cause, communicate clearly, and keep improving.</p><div class="about-links"><a href="https://github.com/devauchiha001" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/devaraj-j-5021363a8" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div></div></div>
-      </section>
-
-      <section class="contact-section" id="contact" aria-labelledby="contact-title">
-        <div class="section-wrap contact-inner reveal"><p class="eyebrow">05 / CONTACT</p><h2 id="contact-title">Have a useful problem<br>to solve<span class="heading-period">?</span></h2><p>I'm open to suitable software development, frontend, full-stack and technical support opportunities. Let's talk about the work.</p><div class="contact-actions"><a class="button button-primary" href="mailto:j.devarajtech@gmail.com">Email Devaraj <span aria-hidden="true">↗</span></a><a class="button button-light" href="https://www.linkedin.com/in/devaraj-j-5021363a8" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a><a class="button button-light" href="https://github.com/devauchiha001" target="_blank" rel="noopener noreferrer">View GitHub <span aria-hidden="true">↗</span></a></div><span class="contact-small">Email: j.devarajtech@gmail.com · Connect by email, GitHub, or LinkedIn.</span></div>
-      </section>
-    </main>
-    <footer class="site-footer"><a class="wordmark" href="#top"><span class="wordmark-mark"><img class="wordmark-image" src="logo.svg" alt=""></span><span class="wordmark-name">DEVARAJ J<span class="wordmark-dot">.</span></span></a><span>Built with intent · © <span id="year"></span></span><a href="#top" class="back-top">Back to top ↑</a></footer>
+    </div>
+  </main>
+    <footer class="site-footer"><a class="wordmark" href="#top"><span class="wordmark-mark"><img class="wordmark-image" src="logo.svg?v=20261025-3" alt=""></span><span class="wordmark-name">DEVARAJ J<span class="wordmark-dot">.</span></span></a><span>Built with intent · © <span id="year"></span></span><a href="#top" class="back-top">Back to top ↑</a></footer>
   </div>
-  <script src="script.js?v=20261012-3"></script>
+  <script src="script.js?v=20261025-3"></script>
+  <script src="motion-polish.js?v=20261025-3"></script>
 
   <div class="deva-ai-widget" id="deva-ai-widget">
     <aside class="deva-ai-panel" id="deva-ai-panel" role="dialog" aria-modal="false" aria-labelledby="deva-ai-title" aria-describedby="deva-ai-status" hidden>

@@ -1,4 +1,9 @@
 (function () {
+  'use strict';
+
+  // Opt into motion-enhanced states only when this script is available.
+  // Base CSS remains readable if JavaScript is disabled or fails to load.
+
   var nav = document.getElementById('primary-nav');
   var toggle = document.querySelector('.menu-toggle');
   var year = document.getElementById('year');
@@ -47,7 +52,6 @@
   // Lightweight pointer parallax for the CSS-built 3D hero; motion is opt-in.
   var scene = document.getElementById('hero-scene');
   var canvas = document.getElementById('scene-particles');
-  var motionPreference = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
   var coarsePointer = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
   if (scene && !reduceMotion && !coarsePointer) {
     scene.addEventListener('pointermove', function (event) {
@@ -117,5 +121,9 @@
       });
     }
   }
+
+
+  // Enable motion only after all enhancement setup has completed.
+  document.documentElement.classList.add('js-motion-enabled');
 
 })();

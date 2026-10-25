@@ -54,3 +54,14 @@ The CSS and JavaScript files in the root are linked by the current HTML pages. T
 - The first iteration uses curated, deterministic answers from verified portfolio information; it does not send visitor messages to an AI provider yet.
 - Next step for true model-generated replies: deploy a server-side endpoint with a private model credential, add rate limits and monitoring, and keep the endpoint URL/configuration separate from any secret.
 - The assistant links users to the actual project, case study, GitHub, LinkedIn and email routes. Test mobile layout, keyboard access and each action before launch.
+
+
+## Cinematic homepage redesign
+
+The homepage uses a responsive asymmetric layout, a near-black base with restrained violet/blue gradients and cyan accents, and compact About, Skills, Project, Contact, Experience, and Approach panels. The redesign stays with the existing static HTML/CSS/JavaScript architecture.
+
+- `portfolio-design.css`: responsive layout and visual tokens.
+- `motion-polish.css` and `motion-polish.js`: motion polish, scroll-aware navigation, and accessible skill filters.
+- `logo.svg`: portfolio monogram used by the page icon and brand panel.
+
+The redesign is proposed on a review branch and is not live until the change is approved and merged. Browser/device QA must be completed before release.
