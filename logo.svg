@@ -1,14 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
-  <title id="title">Devaraj J portfolio monogram</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Devaraj J portfolio icon</title>
+  <desc id="desc">A geometric DJ monogram with a luminous orbit on a midnight background.</desc>
   <defs>
-    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#53c8ff"/>
-      <stop offset="0.52" stop-color="#4d55e8"/>
-      <stop offset="1" stop-color="#a06bff"/>
+    <linearGradient id="orbit" x1="15" y1="102" x2="113" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7658ff"/>
+      <stop offset=".54" stop-color="#547fff"/>
+      <stop offset="1" stop-color="#68eaff"/>
     </linearGradient>
+    <linearGradient id="j-gradient" x1="58" y1="33" x2="91" y2="98" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a78bff"/>
+      <stop offset="1" stop-color="#4b8dff"/>
+    </linearGradient>
+    <radialGradient id="ambient" cx="0" cy="0" r="1" gradientTransform="matrix(0 76 -78 0 64 44)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#244a91" stop-opacity=".72"/>
+      <stop offset="1" stop-color="#070b18" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="2.4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect width="128" height="128" rx="29" fill="#171920"/>
-  <path d="M24 29h25c24 0 39 14 39 35S73 99 49 99H24V29Zm17 14v42h8c14 0 22-7 22-21s-8-21-22-21h-8Z" fill="#f7f7f2"/>
-  <path d="M79 29h17v47c0 16-9 25-25 25-7 0-13-2-18-6l9-13c3 2 6 4 9 4 6 0 8-3 8-10V29Z" fill="url(#brand)"/>
-  <path d="M26 108h76" stroke="url(#brand)" stroke-width="3" stroke-linecap="round" opacity=".9"/>
+  <rect width="128" height="128" rx="29" fill="#070b18"/>
+  <rect x="1" y="1" width="126" height="126" rx="28" fill="url(#ambient)"/>
+  <rect x="1" y="1" width="126" height="126" rx="28" fill="none" stroke="#5075bb" stroke-opacity=".5"/>
+  <path fill="#f3f6ff" fill-rule="evenodd" d="M22 27h25c23 0 38 15 38 37S70 101 47 101H22V27Zm15 14v46h10c14 0 22-8 22-23S61 41 47 41H37Z"/>
+  <path fill="url(#j-gradient)" d="M70 28h17v49c0 17-9 26-25 26-8 0-15-3-21-9l10-12c3 4 6 6 11 6 6 0 8-4 8-12V28Z"/>
+  <path d="M13 81C29 54 65 43 99 52c8 2 14 5 18 9" fill="none" stroke="url(#orbit)" stroke-width="3.2" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M14 81C35 96 71 94 98 78c9-5 15-11 19-17" fill="none" stroke="url(#orbit)" stroke-width="1.4" stroke-linecap="round" opacity=".8"/>
+  <path d="m99 22 2.5 6.5L108 31l-6.5 2.5L99 40l-2.5-6.5L90 31l6.5-2.5L99 22Z" fill="#b2a1ff"/>
+  <circle cx="23" cy="44" r="2" fill="#6ce7ff"/>
+  <circle cx="105" cy="87" r="2" fill="#7e9bff"/>
 </svg>
