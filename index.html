@@ -97,16 +97,22 @@
       <section class="skills-section portfolio-skills" id="skills" aria-labelledby="skills-title">
   <div class="skills-panel">
     <div class="skills-heading"><p class="eyebrow">02 / SKILLS</p><h2 id="skills-title">Tools &amp; technologies<span class="heading-period">.</span></h2><p>Technologies used across my web, AI-assisted, and product-building projects.</p></div>
-    <div class="skills-category-row" aria-label="Skill categories"><span class="skill-category is-current">Development</span><span class="skill-category">AI &amp; APIs</span><span class="skill-category">Product craft</span></div>
+    <div class="skills-category-row" role="group" aria-label="Filter skills">
+      <button class="skill-category is-current" type="button" data-skill-filter="all" aria-pressed="true">All</button>
+      <button class="skill-category" type="button" data-skill-filter="development" aria-pressed="false">Development</button>
+      <button class="skill-category" type="button" data-skill-filter="ai" aria-pressed="false">AI &amp; APIs</button>
+      <button class="skill-category" type="button" data-skill-filter="product" aria-pressed="false">Product craft</button>
+    </div>
+    <p class="skill-filter-status" role="status" aria-live="polite">Showing all 8 skills.</p>
     <div class="skills-grid">
-      <div class="skill-tile"><span class="skill-glyph glyph-js" aria-hidden="true">JS</span><strong>JavaScript</strong><small>Language</small></div>
-      <div class="skill-tile"><span class="skill-glyph glyph-react" aria-hidden="true">✳</span><strong>React</strong><small>UI library</small></div>
-      <div class="skill-tile"><span class="skill-glyph glyph-ts" aria-hidden="true">TS</span><strong>TypeScript</strong><small>Language</small></div>
-      <div class="skill-tile"><span class="skill-glyph glyph-python" aria-hidden="true">Py</span><strong>Python</strong><small>Programming</small></div>
-      <div class="skill-tile"><span class="skill-glyph glyph-firebase" aria-hidden="true">F</span><strong>Firebase</strong><small>App services</small></div>
-      <div class="skill-tile"><span class="skill-glyph glyph-gemini" aria-hidden="true">✧</span><strong>Gemini API</strong><small>AI integration</small></div>
-      <div class="skill-tile"><span class="skill-glyph glyph-vite" aria-hidden="true">V</span><strong>Vite</strong><small>Tooling</small></div>
-      <div class="skill-tile"><span class="skill-glyph glyph-ui" aria-hidden="true">UI</span><strong>UI / UX</strong><small>Design basics</small></div>
+      <div class="skill-tile" data-skill-groups="development"><span class="skill-glyph glyph-js" aria-hidden="true">JS</span><strong>JavaScript</strong><small>Language</small></div>
+      <div class="skill-tile" data-skill-groups="development product"><span class="skill-glyph glyph-react" aria-hidden="true">✳</span><strong>React</strong><small>UI library</small></div>
+      <div class="skill-tile" data-skill-groups="development"><span class="skill-glyph glyph-ts" aria-hidden="true">TS</span><strong>TypeScript</strong><small>Language</small></div>
+      <div class="skill-tile" data-skill-groups="development"><span class="skill-glyph glyph-python" aria-hidden="true">Py</span><strong>Python</strong><small>Programming</small></div>
+      <div class="skill-tile" data-skill-groups="development ai"><span class="skill-glyph glyph-firebase" aria-hidden="true">F</span><strong>Firebase</strong><small>App services</small></div>
+      <div class="skill-tile" data-skill-groups="ai"><span class="skill-glyph glyph-gemini" aria-hidden="true">✧</span><strong>Gemini API</strong><small>AI integration</small></div>
+      <div class="skill-tile" data-skill-groups="development"><span class="skill-glyph glyph-vite" aria-hidden="true">V</span><strong>Vite</strong><small>Tooling</small></div>
+      <div class="skill-tile" data-skill-groups="product"><span class="skill-glyph glyph-ui" aria-hidden="true">UI</span><strong>UI / UX</strong><small>Design basics</small></div>
     </div>
   </div>
 </section>

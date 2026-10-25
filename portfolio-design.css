@@ -212,3 +212,11 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #8fe5
  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
  .skill-tile{transform:none!important}
 }
+
+/* Functional skill filters: visible keyboard focus and clear selected state. */
+.skills-category-row { align-items: center; }
+button.skill-category { cursor: pointer; font: 500 8px var(--mono); }
+button.skill-category:hover { color: #fff; border-color: rgba(161,128,255,.48); }
+button.skill-category:focus-visible { outline: 3px solid #8fe5ff; outline-offset: 3px; }
+.skill-tile[hidden] { display: none !important; }
+.skill-filter-status { margin: 0 0 10px; color: #9295b4; font: 400 8px var(--mono); }
