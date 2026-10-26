@@ -60,10 +60,11 @@ The root HTML pages link shared styles and scripts. Homepage motion rules are co
 The homepage uses a responsive asymmetric layout, a near-black base with restrained violet/blue gradients and cyan accents, and compact About, Skills, Project, Contact, Experience, and Approach panels. The redesign stays with the existing static HTML/CSS/JavaScript architecture.
 
 - `portfolio-design.css`: responsive layout and visual tokens.
-- `motion-polish.css` and `motion-polish.js`: motion polish, scroll-aware navigation, and accessible skill filters.
+- `portfolio-design.css`: merged homepage motion and responsive layout rules.
+- `motion-polish.js`: scroll-aware navigation and accessible skill filters.
 - `logo.svg`: portfolio monogram used by the page icon and brand panel.
 
-The redesign is proposed on a review branch and is not live until the change is approved and merged. Browser/device QA must be completed before release.
+The portfolio updates are being committed to `main`; complete real-browser/device QA before treating them as production-verified.
 
 
 ## Assets
