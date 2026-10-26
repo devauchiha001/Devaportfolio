@@ -16,7 +16,6 @@ A responsive personal portfolio with a product-led homepage and a detailed Caree
 - `sitemap.xml` / `robots.txt` — basic crawl guidance
 - `docs/PORTFOLIO_REDESIGN_BRIEF.md` — strategy, information architecture, wireframe, validation plan and handoff checklist
 - `docs/DESIGN_SYSTEM.md` — visual tokens, typography, components, responsive rules, motion and accessibility standards
-- `devaraj-profile.png` — existing profile image
 - `logo.svg` — new vector DJ portfolio monogram used as the site logo and favicon
 
 ## Cinematic 3D redesign
@@ -38,7 +37,7 @@ The `redesign/cinematic-3d-portfolio` branch introduces a dark navy / electric-b
 ## Deploy
 For a standard GitHub Pages project site, publish the repository root and confirm the site URL in repository settings. If the site is served on a custom domain or a different base path, update the canonical URLs in `index.html` and `case-study.html`, and the locations in `sitemap.xml` and `robots.txt` before publishing.
 
-The CSS and JavaScript files in the root are linked by the current HTML pages. The parallel `css/` and `js/` folders are legacy/alternate copies and are not referenced by the current pages.
+The root HTML pages link shared styles and scripts. Homepage motion rules are consolidated into `portfolio-design.css`; `ai-assistant.css` stays shared between both pages.
 
 ## Before public launch
 - Replace the illustrative CareerForge diagrams with genuine, privacy-safe product screenshots.
@@ -48,10 +47,10 @@ The CSS and JavaScript files in the root are linked by the current HTML pages. T
 - Do not publish user data or unverified product outcome metrics.
 
 
-## Deva AI portfolio assistant
+## Quick answers widget
 
 - `ai-assistant.css` and `ai-assistant.js` provide the accessible floating assistant widget included on the home and CareerForge case-study pages.
-- The first iteration uses curated, deterministic answers from verified portfolio information; it does not send visitor messages to an AI provider yet.
+- The widget uses curated, deterministic answers from published portfolio information and is not connected to a live AI provider.
 - Next step for true model-generated replies: deploy a server-side endpoint with a private model credential, add rate limits and monitoring, and keep the endpoint URL/configuration separate from any secret.
 - The assistant links users to the actual project, case study, GitHub, LinkedIn and email routes. Test mobile layout, keyboard access and each action before launch.
 
@@ -65,3 +64,8 @@ The homepage uses a responsive asymmetric layout, a near-black base with restrai
 - `logo.svg`: portfolio monogram used by the page icon and brand panel.
 
 The redesign is proposed on a review branch and is not live until the change is approved and merged. Browser/device QA must be completed before release.
+
+
+## Assets
+- The social preview is at `assets/portfolio-social-preview.png` (1200×630 PNG) and is referenced by Open Graph and Twitter metadata.
+- TODO: Add your real resume at `assets/Devaraj-J-Resume.pdf`. No placeholder PDF is included.
