@@ -34,7 +34,7 @@
 
     if (matches(q, ["what's your name", "what is your name", "who are you", "your name", "who made you", "who created you", "are you ai"])) {
       return {
-        text: 'I’m Deva AI, Devaraj’s portfolio assistant. I can help you explore his projects, technical skills, experience and contact links. This version uses curated portfolio information; a live AI model is not connected yet.',
+        text: 'I’m the Quick answers guide for Devaraj’s portfolio. I can help you explore his projects, technical skills, experience and contact links. This version uses curated portfolio information; a live AI model is not connected yet.',
         actions: [
           { label: 'CareerForge AI', url: links.careerforge },
           { label: 'GitHub profile', url: links.github },
@@ -44,7 +44,7 @@
     }
     if (matches(q, ['hello', 'hi', 'hey', 'good morning', 'good afternoon', 'good evening'])) {
       return {
-        text: 'Hi! Welcome to Devaraj’s portfolio. I’m Deva AI. Ask me about CareerForge AI, Smart Study AI, his technical skills or experience—or use a link below to explore his work.',
+        text: 'Hi! Welcome to Devaraj’s portfolio. I’m the Quick answers guide. Ask me about CareerForge AI, Smart Study AI, his technical skills or experience—or use a link below to explore his work.',
         actions: [
           { label: 'Explore projects', url: 'index.html#work' },
           { label: 'CareerForge AI', url: links.careerforge },
@@ -120,7 +120,7 @@
       };
     }
     return {
-      text: 'I’m currently in portfolio preview mode, so I answer from Devaraj’s published portfolio facts rather than generating open-ended responses. Try asking about CareerForge AI, Smart Study AI, technical skills, work experience, education or how to contact Devaraj.',
+      text: 'This quick-answers widget uses pre-written answers from Devaraj’s published portfolio facts; it is not connected to a live AI model. Try asking about CareerForge AI, Smart Study AI, technical skills, work experience, education or how to contact Devaraj.',
       actions: [
         { label: 'CareerForge AI', url: links.careerforge },
         { label: 'GitHub profile', url: links.github },
@@ -154,7 +154,7 @@
 
     var label = document.createElement('div');
     label.className = 'deva-ai-message-label';
-    label.textContent = role === 'user' ? 'YOU' : 'DEVA AI';
+    label.textContent = role === 'user' ? 'YOU' : 'QUICK ANSWERS';
 
     var bubble = document.createElement('div');
     bubble.className = 'deva-ai-bubble';
@@ -186,7 +186,7 @@
     panel.hidden = false;
     widget.classList.add('is-open');
     launcher.setAttribute('aria-expanded', 'true');
-    launcher.setAttribute('aria-label', 'Close Deva AI portfolio assistant');
+    launcher.setAttribute('aria-label', 'Close quick answers panel');
     input.focus();
   }
 
@@ -194,7 +194,7 @@
     panel.hidden = true;
     widget.classList.remove('is-open');
     launcher.setAttribute('aria-expanded', 'false');
-    launcher.setAttribute('aria-label', 'Open Deva AI portfolio assistant');
+    launcher.setAttribute('aria-label', 'Open quick answers panel');
     launcher.focus();
   }
 
