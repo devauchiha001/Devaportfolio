@@ -69,3 +69,14 @@ The portfolio updates are being committed to `main`; complete real-browser/devic
 ## Assets
 - The social preview is at `assets/portfolio-social-preview.png` (1200×630 PNG) and is referenced by Open Graph and Twitter metadata.
 - TODO: Add your real resume at `assets/Devaraj-J-Resume.pdf`. No placeholder PDF is included.
+
+
+## Reference-inspired portfolio refresh
+
+The homepage has been redesigned with an airy editorial layout, pill navigation, a fixed translucent header, alternating product panels, role cards, and a label-based custom cursor. The implementation uses vanilla HTML/CSS/JS and no build step.
+
+- `reference-inspired.css` / `reference-inspired.js`: responsive layout, custom cursor, motion reveals and the CareerForge intro placeholder.
+- `assets/careerforge-preview.svg` / `assets/smart-study-preview.svg`: original illustrative UI previews based on published project descriptions (not real browser screenshots).
+- `docs/DESIGN_NOTES.md`: observed reference measurements and implementation notes.
+- Add your own real resume as `assets/Devaraj-J-Resume.pdf`; no placeholder PDF is included.
+- Replace illustrative project previews with privacy-safe screenshots from your deployed applications when you have them.
