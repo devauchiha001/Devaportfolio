@@ -76,7 +76,7 @@ The portfolio updates are being committed to `main`; complete real-browser/devic
 The homepage has been redesigned with an airy editorial layout, pill navigation, a fixed translucent header, alternating product panels, role cards, and a label-based custom cursor. The implementation uses vanilla HTML/CSS/JS and no build step.
 
 - `reference-inspired.css` / `reference-inspired.js`: responsive layout, custom cursor, motion reveals and the CareerForge intro placeholder.
-- `assets/careerforge-preview.svg` / `assets/smart-study-preview.svg`: original illustrative UI previews based on published project descriptions (not real browser screenshots).
+- `assets/careerforge-live-screenshot.png` / `assets/smart-study-live-screenshot.png`: real 1200 × 780 browser captures from each public deployed project landing page. Original SVG concept previews remain in `assets/` as editable backup artwork.
 - `docs/DESIGN_NOTES.md`: observed reference measurements and implementation notes.
 - Add your own real resume as `assets/Devaraj-J-Resume.pdf`; no placeholder PDF is included.
 - Replace illustrative project previews with privacy-safe screenshots from your deployed applications when you have them.

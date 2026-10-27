@@ -64,7 +64,7 @@ The live reference was separately opened at **375 × 812 CSS px** in mobile mode
 
 - **Fonts:** the reference uses Google Sans Flex / Google Sans. These are not copied into the project. The portfolio continues to load the open-source Google Fonts families already in use: Manrope for body/UI, Space Grotesk for display headings, and DM Mono for technical labels.
 - **Logo:** existing `logo.svg` DJ mark is retained.
-- **Project artwork:** local SVG compositions in `assets/careerforge-preview.svg` and `assets/smart-study-preview.svg` are original illustrative UI previews based on documented project workflows. They are not real app screenshots; replace them with crisp, privacy-safe browser captures when you have them.
+- **Project artwork:** the homepage and CareerForge case study use `assets/careerforge-live-screenshot.png` and `assets/smart-study-live-screenshot.png`, captured from the two public deployed project landing pages in a 1200 × 780 browser viewport. They show public landing-page UI, not a signed-in user's private workspace. The earlier original SVG concept illustrations remain in `assets/careerforge-preview.svg` and `assets/smart-study-preview.svg` as editable backup artwork.
 - **Intro:** the “Play intro” action opens a short, looping CSS demo of the documented CareerForge AI workflow. It is a placeholder for a real video, not a video recording.
 - **No copied reference assets:** no reference logo, screenshot, animation footage, cursor image, illustration, or marketing copy is embedded or hotlinked.
 - **Unmeasured acceptance items:** Lighthouse performance score, exact visual parity at 1440/1024/768/375 px, and screen-reader testing must be verified against the deployed GitHub Pages build; no score is claimed here.
