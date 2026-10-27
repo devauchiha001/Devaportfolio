@@ -47,7 +47,7 @@ The reference also uses substantial vertical gaps between major sections, broad 
 - The page contains a large animated hero particle/canvas layer and uses GSAP-style transform states on hero elements (the sampled logo was translated by a fraction of a pixel and had opacity near `0.98`).
 - DOM inspection indicates sections animate as the user moves through the page. The production site's full scroll trigger positions and every easing curve could not be deterministically measured from a single browser capture.
 - This portfolio uses an IntersectionObserver reveal: `opacity 0 → 1`, `translateY(22px) → 0`, `680ms`, `cubic-bezier(.2,.75,.25,1)`, triggered at `12%` intersection, then unobserved. Reduced-motion settings show content without movement.
-- Sticky project artwork on desktop and gentle hover parallax are original choices to echo the reference's sense of depth without requiring a heavy animation runtime.
+- Project artwork uses sticky positioning on desktop. A low-amplitude scroll parallax is scheduled through one `requestAnimationFrame` per scroll frame: the art is offset by a clamped ±14px based on its center's distance from viewport center (multiplier `0.025`). Hover adds a small lift. The effect is disabled for touch/coarse pointers and reduced-motion preferences, and does not require a heavy animation runtime.
 
 ## Custom cursor observations
 
