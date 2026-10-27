@@ -352,3 +352,7 @@ body.redesign-home .eyebrow{font-size:12px}\nbody.redesign-home :is(.nav-dropdow
 body:not(.redesign-home) .case-main :is(small,.eyebrow,.case-section-label,.case-facts span,.case-facts small,.problem-cards p,.flow-list li>span,.flow-list li>div p,.capability-grid p,.capability-grid small,.decision-row,.decision-head,.decision-row>span,.decision-row>p,.learning-grid p,.metric-grid span,.metric-grid small){font-size:12px}
 
 body:not(.redesign-home) .case-main :is(.eyebrow,.case-visual-top,.case-visual-caption,.case-section-label,.case-facts span,.case-facts small,.problem-cards article>span,.problem-cards p,.flow-list li>span,.flow-list li>div p,.flow-list li>i,.case-note,.capability-grid article>span,.capability-grid p,.capability-grid small,.decision-row,.decision-head,.decision-row>span,.decision-row>p,.learning-grid p,.metric-grid span,.metric-grid small,.next-step p){font-size:12px}
+
+/* Minimum 12px for visible microcopy, navigation labels and quick-answer widget text. */
+body.redesign-home :is(.header-contact,.intro-strip-inner>div,.preview-pill b,.deva-ai-launcher,.deva-ai-heading span,.deva-ai-online,.deva-ai-status,.deva-ai-message-label,.deva-ai-bubble,.deva-ai-actions a,.deva-ai-suggestions button,.deva-ai-form label,.deva-ai-form input,.deva-ai-footnote){font-size:12px}
+body:not(.redesign-home) .case-breadcrumb{font-size:12px}
