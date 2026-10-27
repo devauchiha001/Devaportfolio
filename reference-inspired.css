@@ -103,7 +103,7 @@ body.redesign-home{margin:0;background:var(--paper);color:var(--ink);font:400 16
 .project-feature-study{grid-template-columns:minmax(310px,.92fr) minmax(0,1.08fr);margin-top:96px}
 .project-feature-study .project-art{order:2}
 .project-feature-study .project-description{order:1}
-.project-art{position:sticky;top:126px;align-self:start;display:block;overflow:hidden;text-decoration:none;border-radius:25px;padding:15px;background:#e8e9e3;border:1px solid #e0e1dc;transition:transform .5s cubic-bezier(.2,.75,.25,1),box-shadow .35s ease}
+.project-art{position:sticky;top:126px;align-self:start;translate:0 var(--scroll-shift,0px);will-change:translate;display:block;overflow:hidden;text-decoration:none;border-radius:25px;padding:15px;background:#e8e9e3;border:1px solid #e0e1dc;transition:transform .5s cubic-bezier(.2,.75,.25,1),box-shadow .35s ease}
 .project-art-career{background:linear-gradient(135deg,#e9e8ff,#dadbfa)}
 .project-art-study{background:linear-gradient(135deg,#e0f3ed,#c8e7dd)}
 .project-art:hover{transform:translateY(-4px);box-shadow:0 28px 65px #1c25221c}
@@ -348,5 +348,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
   body:not(.redesign-home) .site-header{position:relative;inset:auto;backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--paper);width:calc(100% - 36px);margin-inline:auto;padding-inline:0}
 }
 /* Non-essential visual metadata stays comfortably readable at 12px or larger. */
-body.redesign-home :is(.nav-dropdown small,.wordmark-name,.hero-meta,.preview-browserbar,.preview-pill small,.preview-caption,.intro-strip-inner>span,.project-art-label,.art-footer,.project-capabilities span,.stack-list span,.project-stack-label,.skill-group>p,.skill-pills span,.role-index,.role-link,.experience-row time,.experience-tag,.about-mark-panel>span,.contact-card-label,.site-footer>span,.back-top,.demo-stage-top,.demo-step small,.demo-dialog-footer>span){font-size:12px}
+body.redesign-home .eyebrow{font-size:12px}\nbody.redesign-home :is(.nav-dropdown small,.wordmark-name,.hero-meta,.preview-browserbar,.preview-pill small,.preview-caption,.intro-strip-inner>span,.project-art-label,.art-footer,.project-capabilities span,.stack-list span,.project-stack-label,.skill-group>p,.skill-pills span,.role-index,.role-link,.experience-row time,.experience-tag,.about-mark-panel>span,.contact-card-label,.site-footer>span,.back-top,.demo-stage-top,.demo-step small,.demo-dialog-footer>span){font-size:12px}
 body:not(.redesign-home) .case-main :is(small,.eyebrow,.case-section-label,.case-facts span,.case-facts small,.problem-cards p,.flow-list li>span,.flow-list li>div p,.capability-grid p,.capability-grid small,.decision-row,.decision-head,.decision-row>span,.decision-row>p,.learning-grid p,.metric-grid span,.metric-grid small){font-size:12px}
+
+body:not(.redesign-home) .case-main :is(.eyebrow,.case-visual-top,.case-visual-caption,.case-section-label,.case-facts span,.case-facts small,.problem-cards article>span,.problem-cards p,.flow-list li>span,.flow-list li>div p,.flow-list li>i,.case-note,.capability-grid article>span,.capability-grid p,.capability-grid small,.decision-row,.decision-head,.decision-row>span,.decision-row>p,.learning-grid p,.metric-grid span,.metric-grid small,.next-step p){font-size:12px}

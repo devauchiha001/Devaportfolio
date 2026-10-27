@@ -63,6 +63,40 @@
     openDemo.addEventListener('click',function(){window.location.href='https://careerforge-ai.de5.net/';});
   }
 
+  // Low-amplitude project-art parallax is scheduled once per animation frame.
+  // Sticky artwork remains readable and the effect is disabled for touch or reduced motion.
+  if(!reduce && !coarse && window.matchMedia('(min-width: 761px)').matches){
+    var parallaxArts = Array.prototype.slice.call(document.querySelectorAll('.project-art'));
+    var parallaxFrame = 0;
+    function updateProjectParallax(){
+      parallaxFrame = 0;
+      var viewportMid = (window.innerHeight || 800) * 0.5;
+      parallaxArts.forEach(function(art){
+        var rect = art.getBoundingClientRect();
+        if(rect.bottom < -100 || rect.top > (window.innerHeight || 800) + 100) return;
+        var artMid = rect.top + rect.height * 0.5;
+        var shift = Math.max(-14,Math.min(14,(viewportMid-artMid)*0.025));
+        art.style.setProperty('--scroll-shift',shift.toFixed(2)+'px');
+      });
+    }
+    function requestProjectParallax(){
+      if(!parallaxFrame) parallaxFrame = window.requestAnimationFrame(updateProjectParallax);
+    }
+    updateProjectParallax();
+    window.addEventListener('scroll',requestProjectParallax,{passive:true});
+    window.addEventListener('resize',requestProjectParallax,{passive:true});
+  }
+
+  // Close sibling navigation groups when a different group opens.
+  document.querySelectorAll('.nav-group').forEach(function(group){
+    group.addEventListener('toggle',function(){
+      if(!group.open) return;
+      document.querySelectorAll('.nav-group').forEach(function(other){
+        if(other!==group && other.open) other.open=false;
+      });
+    });
+  });
+
   // Custom pill cursor: created only for fine pointers and only when motion is allowed.
   if(reduce || coarse || !window.matchMedia('(hover: hover)').matches) return;
   var cursor = document.createElement('div');
